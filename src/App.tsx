@@ -1,24 +1,43 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Provider } from "jotai";
+import "./App.css";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import MessageBuilder from "./components/MessageBuilder";
+import Layout from "./pages/Layout";
+import NotFound from "./pages/NotFound";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: (
+      <Layout>
+        <MessageBuilder />
+      </Layout>
+    ),
+  },
+  {
+    path: "/edit",
+    element: (
+      <Layout>
+        <MessageBuilder />
+      </Layout>
+    ),
+  },
+  {
+    path: "*",
+    element: (
+      <Layout>
+        <NotFound />
+      </Layout>
+    ),
+  },
+]);
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Provider>
+        <RouterProvider router={router} />
+      </Provider>
     </div>
   );
 }

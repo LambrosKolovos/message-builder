@@ -1,0 +1,138 @@
+.sidebar-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar-container {
+  padding: 24px;
+  min-width: 360px;
+  width: 360px;
+  box-shadow: 1px 0px 0px 0px #00000014;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 50px;
+  overflow-y: scroll;
+}
+
+.sidebar-action-buttons {
+  position: sticky;
+  bottom: 0;
+  padding: 24px;
+  background: white;
+  box-shadow: 0px -1px 0px 0px rgba(0, 0, 0, 0.08);
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sidebar-title {
+  font-size: 24px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.content-block {
+  border: 1px solid #0000001f;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 12px 24px;
+}
+
+.content-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.content-top-text {
+  display: flex;
+  gap: 8px;
+  font-weight: 600;
+  align-items: center;
+}
+
+.help-container {
+  background: #f5f5f5;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.help-text {
+  font-size: 12px;
+  color: #0000008a;
+  font-weight: 400;
+  line-height: 17px;
+}
+
+.help-header {
+  color: rgba(0, 0, 0, 1);
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 500;
+}
+
+.content-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  animation: slideDown 0.75s ease-in-out;
+}
+
+.action-button-container {
+  box-shadow: 0px -1px 0px 0px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.message-button-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.message-button-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.message-button-input {
+  padding: 10px;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    height: 30px;
+    opacity: 0;
+  }
+
+  to {
+    height: 230px;
+    opacity: 1;
+  }
+}
